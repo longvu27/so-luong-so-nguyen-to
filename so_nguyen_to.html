@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let sl = +prompt('Nhập số lượng số nguyên tố đầu tiên bạn muốn');
+  let uoc = 0;
+  let slsnt = 0;
+  for (let i=2; i<1000; i++) {
+    if (slsnt<sl) {
+      for (let j=1; j<=i; j++) {
+        if ( i%j==0 ) {
+          uoc += 1;
+        }
+      }
+      if (uoc==2) {
+        document.write(i+'<br>');
+        slsnt += 1;
+      }
+      uoc = 0;
+    } else {
+        break;
+    }
+  }
+
+</script>
+</body>
+</html>
